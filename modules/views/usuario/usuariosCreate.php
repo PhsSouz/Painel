@@ -1,0 +1,22 @@
+<div ng-controller="usuariosController as ctrl">
+	<div class="clearfix"></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="header">
+                        <h4 class="title">Cadastro de usuário</h4> 
+                    </div>
+                    <div class="header">
+                        <a ui-sref="usuario" type="submit" class="btn btn-info btn-fill pull-right">Voltar</a ui-sref="usuario">
+                    </div>
+                    <div class="content">
+                        <usuario></usuario>
+                        <button type="submit" class="btn btn-info btn-fill pull-left" ng-click="ctrl.atualizar(ctrl.usuario)">Cadastrar usuário</button>
+                        <div class="clearfix"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
