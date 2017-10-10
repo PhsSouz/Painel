@@ -9,50 +9,50 @@
 			//Inicio
 		    .state('inicio', {
 		        url: '/',
-		        templateUrl: 'modules/views/home/inicio.php',
+		        templateUrl: 'modules/views/home/inicio.html',
 		    })		    
 
 		    //Usuarios
 		    .state('usuario', {
 		        url: 'usuarios',
-		        templateUrl: 'modules/views/usuario/usuarios.php',
+		        templateUrl: 'modules/views/usuario/usuarios.html',
 		    })			    
 
 		    .state('usuario-edit', {
 		        url: 'usuarios/edit/:id',
-		        templateUrl: 'modules/views/usuario/usuariosEdit.php',
+		        templateUrl: 'modules/views/usuario/usuariosEdit.html',
 		    })			    
 
 		    .state('usuario-create', {
 		        url: 'usuarios/create/',
-		        templateUrl: 'modules/views/usuario/usuariosCreate.php',
+		        templateUrl: 'modules/views/usuario/usuariosCreate.html',
 		    })		    
 
 		    //Consultas
 		    .state('consultas', {
 		        url: 'consulta/list/:id',
-		        templateUrl: 'modules/views/consulta/consultas.php',
+		        templateUrl: 'modules/views/consulta/consultas.html',
 		    })		    
 
 		    .state('consulta-edit', {
 		        url: 'consulta/edit/:id',
-		        templateUrl: 'modules/views/consulta/consultasEdit.php',
+		        templateUrl: 'modules/views/consulta/consultasEdit.html',
 		    })		    
 
 		    .state('consulta-create', {
 		        url: 'consulta/create/:id',
-		        templateUrl: 'modules/views/consulta/consultasCreate.php',
+		        templateUrl: 'modules/views/consulta/consultasCreate.html',
 		    })
 
-		    //Etrato
+		    //Extrato
 		    .state('pagamentos', {
 		        url: 'pagamento',
-		        templateUrl: 'modules/views/financeiro/pagamentos.php',
+		        templateUrl: 'modules/views/financeiro/pagamentos.html',
 		    })			    
 
 		    .state('pagamentos-create', {
 		        url: 'pagamento/create/',
-		        templateUrl: 'modules/views/financeiro/pagamentosCreate.php',
+		        templateUrl: 'modules/views/financeiro/pagamentosCreate.html',
 		    })			    
 		})
 	})

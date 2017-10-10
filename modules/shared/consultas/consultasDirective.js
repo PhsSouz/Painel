@@ -8,7 +8,7 @@
 
 	    function Partials(){
 	      	return {
-	        	templateUrl: 'modules/views/consulta/partials.php'
+	        	templateUrl: 'modules/views/consulta/partials.html'
 	      	}
 	    }
 })();

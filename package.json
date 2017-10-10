@@ -29,6 +29,8 @@
     "gulp-size": "^2.1.0",
     "gulp-soften": "0.0.1",
     "gulp-uglify": "^3.0.0",
+    "lodash": "^4.17.4",
+    "sweetalert": "^2.0.5",
     "tiny-lr": "^1.0.5",
     "webpack": "^3.5.6"
   },

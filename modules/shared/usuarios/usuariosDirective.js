@@ -8,7 +8,7 @@
 
 	    function Partials(){
 	      	return {
-	        	templateUrl: 'modules/views/usuario/partials.php'
+	        	templateUrl: 'modules/views/usuario/partials.html'
 	      	}
 	    }
 })();

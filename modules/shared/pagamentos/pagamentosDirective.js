@@ -8,7 +8,7 @@
 
 	    function Partials(){
 	      	return {
-	        	templateUrl: 'modules/views/financeiro/partials.php'
+	        	templateUrl: 'modules/views/financeiro/partials.html'
 	      	}
 	    }
 })();

@@ -28,18 +28,38 @@
 			UsuarioService.create(usuario)
 				.then(function(response){
 					if(response.status == 200){
-						$state.go('usuario')
+						swal({
+							title: "Usuário cadastrado com sucesso!",
+							text: "Clique em Ok para continuar!",
+							icon: "success",
+							button: "Ok!",
+						}).then((value) => {
+							$state.go('usuario')
+						})
 					}
 				}
 			)
 		}
 
 		function deletar(index,id){
-			self.usuarios.splice(index, 1)
 			UsuarioService.destroy(id)
 				.then(function(response){
 					if(response.data == 200){
-						console.log('deletado')
+						self.usuarios.splice(index, 1)
+						swal({
+							title: "Deseja deletar esse Usuário?",
+							text: "Essa operação não pode ser desfeita!",
+							icon: "warning",
+							buttons: true,
+							dangerMode: true,
+						})
+						.then((willDelete) => {
+						  	if(willDelete) {
+						    	swal("Usuário deletado com sucesso!", {
+						      		icon: "success", 
+						    	})
+						  	}
+						})
 					}
 				}
 			)
@@ -60,10 +80,18 @@
 		function atualizar(usuario){
 			UsuarioService.update(usuario)
 				.then(function(response){
-					self.usuarioEdit = response.data
+					if(response.data == 200){
+						swal({
+							title: "Usuário editado com sucesso!",
+							text: "Clique em Ok para continuar!",
+							icon: "success",
+							button: "Ok!",
+						}).then((value) => {
+							$state.go('usuario')
+						})
+					}
 				}
 			)
-			$state.go('usuario')
 		}
 	}
 })();
