@@ -94,16 +94,16 @@ __webpack_require__(19);
 //Financeiro
 __webpack_require__(20);
 __webpack_require__(21);
-__webpack_require__(27);
+__webpack_require__(22);
 
 //Login
-__webpack_require__(22);
 __webpack_require__(23);
+__webpack_require__(24);
 
 //Usuarios
-__webpack_require__(24);
 __webpack_require__(25);
 __webpack_require__(26);
+__webpack_require__(27);
 
 /***/ }),
 /* 1 */
@@ -43607,6 +43607,26 @@ module.exports = Array.isArray || function (arr) {
 
 
 (function () {
+
+	'use strict';
+
+	angular.module('myApp').directive('pagamentos', Partials);
+
+	function Partials() {
+		return {
+			templateUrl: 'modules/views/financeiro/partials.php'
+		};
+	}
+})();
+
+/***/ }),
+/* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+(function () {
 	'use strict';
 
 	angular.module('myApp').controller('loginController', Controller);
@@ -43631,7 +43651,7 @@ module.exports = Array.isArray || function (arr) {
 })();
 
 /***/ }),
-/* 23 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43661,7 +43681,7 @@ module.exports = Array.isArray || function (arr) {
 })();
 
 /***/ }),
-/* 24 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43726,7 +43746,7 @@ module.exports = Array.isArray || function (arr) {
 })();
 
 /***/ }),
-/* 25 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43776,7 +43796,7 @@ module.exports = Array.isArray || function (arr) {
 })();
 
 /***/ }),
-/* 26 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43791,26 +43811,6 @@ module.exports = Array.isArray || function (arr) {
 	function Partials() {
 		return {
 			templateUrl: 'modules/views/usuario/partials.php'
-		};
-	}
-})();
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-(function () {
-
-	'use strict';
-
-	angular.module('myApp').directive('pagamentos', Partials);
-
-	function Partials() {
-		return {
-			templateUrl: 'modules/views/financeiro/partials.php'
 		};
 	}
 })();
