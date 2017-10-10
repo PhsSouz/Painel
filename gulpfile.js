@@ -14,6 +14,7 @@ var size = require('gulp-size');
 var lr = require('tiny-lr');
 var server = lr();
 
+//Compilador sass//
 gulp.task('sass', function() {
     return gulp.src('asstes/sass/*.scss')
     .pipe(soften(4))
@@ -28,6 +29,7 @@ gulp.task('sass', function() {
     .pipe(livereload(server));
 });
 
+//Compilador js//
 gulp.task('scripts', function() {
     return gulp.src(['assets/js/*.js'])
     .pipe(soften(4))
@@ -41,6 +43,7 @@ gulp.task('scripts', function() {
     .pipe(livereload(server));
 });
 
+//Compilador images//
 gulp.task('images', function() {
   return gulp.src('assets/img/**')
   .pipe(cache(imagemin({ optimizationLevel: 9, progressive: false, interlaced: false })))
@@ -60,32 +63,31 @@ gulp.task('listen', function(next) {
     });
 });
 
-var filesToMove = [
-        './assets/**'
-        ];
+//Base path/
+// var filesToMove = [
+//         './assets/**'
+//         ];
 
-gulp.task('move', function(){
-  gulp.src(filesToMove, { base: './' })
-  .pipe(gulp.dest('../'));
-});
+//Mover diretorios/
+// gulp.task('move', function(){
+//   gulp.src(filesToMove, { base: './' })
+//   .pipe(gulp.dest('../'));
+// });
 
 // Watch Files For Changes
 gulp.task('watch', function() {
     gulp.watch('asstes/js/*.js', ['scripts']);
-    gulp.watch('asstes/js/*.js', ['scripts']);
-    gulp.watch('asstes/js/*.js', ['scripts']);
     gulp.watch('asstes/scss/*.scss', ['sass']);
     gulp.watch('asstes/images/**', ['images']);
     gulp.watch('asstes/fonts/**', ['fonts']);
-
-    gulp.watch('assets/fonts/**', ['move']);
-    gulp.watch('assets/css/**', ['move']);
-    gulp.watch('assets/images/**', ['move']);
-    gulp.watch('assets/js/**', ['move']);
+    // gulp.watch('assets/fonts/**', ['move']);
+    // gulp.watch('assets/css/**', ['move']);
+    // gulp.watch('assets/images/**', ['move']);
+    // gulp.watch('assets/js/**', ['move']);
 
     gulp.watch('*.html').on('change', function(file) {
         livereload(server).changed(file.path);
     });
 });
 
-gulp.task('default', ['sass', 'scripts', 'images', 'fonts', 'listen', 'move', 'watch']);
+gulp.task('default', ['sass', 'scripts', 'images', 'fonts', 'listen', /*'move',*/ 'watch']);

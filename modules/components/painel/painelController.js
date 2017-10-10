@@ -13,7 +13,7 @@
 		function deslogar(){
 			LoginService.destroySession()
 				.then(function(response){
-					window.location.assign("http://localhost/paineldentista/#!/")
+					window.location.assign("http://localhost/github/Painel/#!/")
 				}
 			)
 		}

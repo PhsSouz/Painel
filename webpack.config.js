@@ -5,7 +5,7 @@ module.exports = {
 
     //define output point
     output: {
-        path: __dirname +  '/assets/js/',
+        path: __dirname +  '/assets/js/webpack/',
         filename: 'app.js'
     },
 
@@ -25,5 +25,4 @@ module.exports = {
             }
         ]
     }
-
 };

@@ -6,7 +6,7 @@
 		<link rel="icon" type="image/png" href="assets/img/icone.png"/>
 		<link rel="stylesheet" type="text/css" href="assets/login/styles/login.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-		<script src="assets/js/app.js"></script>
+		<script src="assets/js/webpack/app.js"></script>
 	</head>
 	<body>
 		<div class="body-login" ng-app="myApp"  ng-controller="loginController as ctrl">

@@ -15,7 +15,7 @@
 	    <link href="assets/css/light-bootstrap-dashboard.css" rel="stylesheet"/>
 	    <link href="assets/css/demo.css" rel="stylesheet" />
 	    <link href="assets/css/pe-icon-7-stroke.css" rel="stylesheet" />
-		<script src="assets/js/app.js"></script>
+		<script src="assets/js/webpack/app.js"></script>
 	</head>
 	<body ng-app="myApp" ng-controller="controlerModule as ctrl">
 		<div class="wrapper">
@@ -47,11 +47,5 @@
 		    </div>
 		</div>
 	</body>
-	<!-- Scripts -->
-    <script src="assets/js/jquery-1.10.2.js"></script>
-	<script src="assets/js/bootstrap.min.js"></script>
-	<script src="assets/js/bootstrap-checkbox-radio-switch.js"></script>
-    <script src="assets/js/bootstrap-notify.js"></script>
-	<script src="assets/js/light-bootstrap-dashboard.js"></script>
-	<script src="assets/js/demo.js"></script>
+	<script type="text/javascript" src="assets/js/app.min.js"></script>
 </html>
